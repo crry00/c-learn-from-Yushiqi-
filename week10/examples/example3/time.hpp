@@ -3,9 +3,10 @@
 
 class MyTime
 {
+    public:
     int hours;
     int minutes;
-  public:
+
     MyTime(): hours(0), minutes(0){}
     MyTime(int h, int m): hours(h), minutes(m){}
 
@@ -52,13 +53,22 @@ class MyTime
                 + std::to_string(this->minutes) + " minutes.";
     }
 
-    friend std::ostream & operator<<(std::ostream & os, const MyTime & t)
+    // friend std::ostream & operator<<(std::ostream & os, const MyTime & t)
+    // {
+    //     std::string str = std::to_string(t.hours) + " hours and " 
+    //                     + std::to_string(t.minutes) + " minutes.";
+    //     os << str;
+    //     return os;
+    // }
+
+    friend std::ostream& operator<<(std::ostream& os,const MyTime& t)
     {
-        std::string str = std::to_string(t.hours) + " hours and " 
+        std::string str=std::to_string(t.hours)+" hours and " 
                         + std::to_string(t.minutes) + " minutes.";
-        os << str;
+        os<<str;
         return os;
     }
+
     friend std::istream & operator>>(std::istream & is, MyTime & t)
     {
         is >> t.hours >> t.minutes;

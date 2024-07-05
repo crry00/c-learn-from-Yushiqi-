@@ -25,13 +25,13 @@ int main()
                 z = ratio(x,y);
                 std::cout << "ratio(" << x << ", " << y<< ") = " << z << std::endl;
             }
-            catch(const char * msg)
+            catch(const char * msg)//接受throw
             {
                 std::cerr << "Call ratio() failed: " << msg << std::endl;
                 std::cerr << "I give you another chance." << std::endl;
             }
         }
-
+        // 如果有throw异常不去捕获，异常就会把程序杀死
         // { //if no try-catch
         //     z = ratio(x,y);
         //     std::cout << "ratio(" << x << ", " << y<< ") = " << z << std::endl;            

@@ -1,13 +1,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <cfloat>
+#include <cmath>
 
 float ratio(float a, float b)
 {
     if (fabs(a + b) < FLT_EPSILON)
     {
         std::cerr << "The sum of the two arguments is close to zero." << std::endl;
-        std::abort();
+        std::abort();//中止程序
     }
     return (a - b) / (a + b);
     //return int(a - b) / int(a + b);// divided by zero behavior differently for int and float

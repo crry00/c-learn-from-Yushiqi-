@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class Supplier;
+// class Supplier;
 class Sniper;
-
+//两变量均声明
+//
 class Supplier
 {
     int storage;
@@ -42,6 +43,7 @@ bool Supplier::provide(Sniper & sniper)
     cout << "sniper has " << sniper.bullets << " bullets now." << endl;
     return true;
 }
+
 int main()
 {
     Sniper sniper(2);

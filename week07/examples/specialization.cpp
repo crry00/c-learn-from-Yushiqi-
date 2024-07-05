@@ -16,6 +16,7 @@ struct Point
 };
 
 // Specialization for Point + Point operation
+//!template 一定要加<>，这是特例化标识，否则是实例化！
 template<>
 Point sum<Point>(Point pt1, Point pt2)
 {

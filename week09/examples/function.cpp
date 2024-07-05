@@ -8,7 +8,7 @@ class Student
     int born;
     bool male; 
   public:
-    void setName(const char * s)
+    void setName(const char * s)//默认inline函数
     {
         if (s == NULL)
         {
@@ -31,11 +31,11 @@ class Student
     void printInfo();
 };
 
-void Student::setGender(bool isMale)
+inline void Student::setGender(bool isMale)//inline 函数，建议简单实现用inline，复杂实现不用
 {
     male = isMale;
 }
-void Student::printInfo()
+void Student::printInfo()//非inline函数
 {
     std::cout << "Name: " << name << std::endl;
     std::cout << "Born in " << born << std::endl;

@@ -36,7 +36,7 @@ class MyString
     friend std::ostream & operator<<(std::ostream & os, const MyString & ms)
     {
         os << "buf_len = " << ms.buf_len;
-        os << ", characters = " << static_cast<void*>(ms.characters);
+        os << ", characters = " << static_cast<void*>(ms.characters);//static_cast<void*>使其输出地址
         os << " [" << ms.characters << "]";
         return os;
     }

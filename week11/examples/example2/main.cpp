@@ -20,3 +20,19 @@ int main()
     cout << "end of main()" << endl; // it can be printed out
     return 0;
 }
+
+
+//cvMat，有空看看cv的Mat
+/*
+union
+{
+    uchar* ptr;
+    int * i;
+    float* fl;
+    short* s;
+    doubel* db;
+}data;
+
+用这个实现类似泛型需求
+
+*/

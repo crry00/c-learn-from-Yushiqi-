@@ -17,7 +17,7 @@ class IntMat
     {
         delete [] data;
     }
-    IntMat(const IntMat&) = delete;
+    IntMat(const IntMat&) = delete;//将拷贝构造和赋值取消
     IntMat& operator=(const IntMat&) = delete;
     int getElement(size_t r, size_t c);
     bool setElement(size_t r, size_t c, int value);

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-typedef int myint;
+typedef int myint;//定义一个别名
 typedef unsigned char vec3b[3];
 typedef struct _rgb_struct{ // name _rgb_struct can be omit
     unsigned char r;

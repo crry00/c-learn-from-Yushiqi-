@@ -1,0 +1,4 @@
+/home/water/桌面/c++_yushiqi/CPP/week06/examples/ex/ex1/CMakeFiles/rebuild_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week06/examples/ex/ex1/CMakeFiles/edit_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week06/examples/ex/ex1/CMakeFiles/swapdemo.dir
+/home/water/桌面/c++_yushiqi/CPP/week06/examples/ex/ex1/CMakeFiles/swap.dir

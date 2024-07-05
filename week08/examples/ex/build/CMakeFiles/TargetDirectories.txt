@@ -1,0 +1,3 @@
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/build/CMakeFiles/rebuild_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/build/CMakeFiles/edit_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/build/CMakeFiles/dotp.dir

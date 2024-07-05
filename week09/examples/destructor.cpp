@@ -81,7 +81,7 @@ int main()
 
     Student * zhou =  new Student("Zhou", 1991, false);
     zhou->printInfo();
-    delete zhou;
+    delete zhou;//申请的内存如果不手动delete，出了作用域也不会释放。。
 
     return 0;
 }

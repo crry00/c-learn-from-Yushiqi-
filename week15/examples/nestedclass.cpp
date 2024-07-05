@@ -3,7 +3,7 @@ using namespace std;
 class Storage
 {
 public: 
-    class Fruit
+    class Fruit//内嵌类
     {
         string name;
         int weight;
@@ -14,6 +14,7 @@ public:
 private:
     Fruit fruit;
 public:
+    Storage()=delete;
     Storage(Fruit f)
     {
         this->fruit = f;
@@ -27,8 +28,10 @@ public:
 
 int main()
 {
-    Storage::Fruit apple("apple", 100);
+    Storage::Fruit apple("apple", 100);//内嵌类不用实例化也能调用，和static有点像
     Storage mystorage(apple);
+    //Storage my(); //这个被解析为函数声明
+    Storage my; //这才是正确操作！！
     mystorage.print();
     return 0;
 }

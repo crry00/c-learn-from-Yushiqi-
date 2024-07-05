@@ -66,7 +66,7 @@ void Student::printInfo()
 
 int main()
 {
-    Student yu;
+    Student yu;//默认构造
     yu.printInfo();
 
     yu.setName("Yu");
@@ -84,6 +84,7 @@ int main()
     Student * zhou =  new Student("Zhou", 1991, false);
     zhou->printInfo();
     delete zhou;
+
 
     Student * s =  new Student();
     // Student * s =  new Student; // the same

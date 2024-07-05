@@ -5,11 +5,11 @@
 // return NULL if failed
 Matrix * createMat(size_t rows, size_t cols)
 {
-    Matrix * p = NULL;
+    Matrix * p = NULL;//初始化以检查后面的操作
 
     if(rows == 0 || cols == 0)
     {
-        fprintf(stderr, "rows and/or cols is 0.\n");
+        fprintf(stderr, "rows and/or cols is 0.\n");//错误输出，输出到控制台，而不是文件
         return NULL;
     }
     // allocate memory
@@ -26,7 +26,7 @@ Matrix * createMat(size_t rows, size_t cols)
     if(p->data == NULL)
     {
         fprintf(stderr, "Failed to allocate memory for the matrix data.\n");
-        free(p); //Don't forget to free memory here!
+        free(p); //Don't forget to free memory here! 释放第一次内存
         return NULL;
     }
 
@@ -45,7 +45,7 @@ bool releaseMat(Matrix * p)
     return true;
 }
 
-bool add(const Matrix * input1, const Matrix * input2, Matrix *output)
+bool add(const Matrix * input1, const Matrix * input2, Matrix *output)//add 里面不要生成matrix
 {
     // You much check all parameters carefully first
     // It's important, and can save a lot of time on debuging
@@ -54,7 +54,7 @@ bool add(const Matrix * input1, const Matrix * input2, Matrix *output)
         //use stderr for error messages
         fprintf(stderr, "File %s, Line %d, Function %s(): The 1st parameter is NULL.\n", __FILE__, __LINE__, __FUNCTION__);
         return false;
-    }
+    }//输出当前文件行数函数错误
     else if(input1->data == NULL )
     {
         fprintf(stderr, "%s(): The 1st parameter has no valid data.\n", __FUNCTION__);
@@ -94,6 +94,8 @@ bool add(const Matrix * input1, const Matrix * input2, Matrix *output)
         return false;
     }
 
+    //循环越少越好！
+
     //version 1, the best one
     size_t length = input1->rows * input1->cols;
     const float * p1 = input1->data;
@@ -102,26 +104,26 @@ bool add(const Matrix * input1, const Matrix * input2, Matrix *output)
     for(size_t i = 0; i < length; i++)
         *(p3++) = *(p1++) + *(p2++);
     
-    //version 2
-    for(size_t r = 0; r < input1->rows; r++)
-    {
-        // to calculate (cols * r) here, don't put it into the inner loop
-        const float * p1 = input1->data + input1->cols * r;
-        const float * p2 = input2->data + input2->cols * r;
-        float * p3 = output->data +  + output->cols * r;
+    // //version 2
+    // for(size_t r = 0; r < input1->rows; r++)
+    // {
+    //     // to calculate (cols * r) here, don't put it into the inner loop
+    //     const float * p1 = input1->data + input1->cols * r;
+    //     const float * p2 = input2->data + input2->cols * r;
+    //     float * p3 = output->data +  + output->cols * r;
 
-        for(size_t c = 0; c < input1->cols; c++)
-            *(p3++) = *(p1++) + *(p2++);
-    }
+    //     for(size_t c = 0; c < input1->cols; c++)
+    //         *(p3++) = *(p1++) + *(p2++);
+    // }
 
-    //version 3, a bad one
-    for(size_t r = 0; r < input1->rows; r++)
-    {
-        for(size_t c = 0; c < input1->cols; c++)
-            output->data[output->cols * r + c] =
-            input1->data[input1->cols * r + c] +
-            input2->data[input2->cols * r + c];
-    }
+    // //version 3, a bad one
+    // for(size_t r = 0; r < input1->rows; r++)
+    // {
+    //     for(size_t c = 0; c < input1->cols; c++)
+    //         output->data[output->cols * r + c] =
+    //         input1->data[input1->cols * r + c] +
+    //         input2->data[input2->cols * r + c];
+    // }
 
     return true;
 }

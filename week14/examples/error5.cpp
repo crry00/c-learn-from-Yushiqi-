@@ -17,7 +17,7 @@ float ratio(float a, float b)
 float ratio_wrapper(float a, float b)
 {
     try{
-        return ratio(a, b);
+        return ratio(a, b);//如果出现异常会一直往外throw，直到有catch或丢完到main为止
     }
     catch(int eid)
     {
@@ -55,3 +55,11 @@ int main()
     std::cout << "Bye!" << std::endl;
     return 0;
 }
+
+
+/*
+try
+{}
+catch(...)//this ... will match every 
+{}
+*/

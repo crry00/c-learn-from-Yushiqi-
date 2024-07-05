@@ -65,7 +65,7 @@ class MyString
     }
 };
 
-class MyMap: pubic MyString
+class MyMap: public MyString
 {
   private:
     char * keyname;
@@ -73,14 +73,16 @@ class MyMap: pubic MyString
     {
         ...
     }
-    MyMap(const MyMap & mm): MyString(mm.buf_len, mm.characters)
+    MyMap(const MyMap & mm): MyString(mm.buf_len, mm.characters)//MyMap 在内存中的前半部分可以被解读为MyString
+    //且由于derive类不能使用修改基类数据，只能通过MyString(mm.buf_len, mm.characters)间接访问
     {
         //allocate memory for keyname
         //and hard copy from mm to *this
     }
     MyMap & operator=(const MyMap &mm)
     {
-        MyMap::operator=(mm);
+        //MyMap::operator=(mm);
+        my
         //allocate memory for keyname
         //and hard copy from mm to *this
         return *this;

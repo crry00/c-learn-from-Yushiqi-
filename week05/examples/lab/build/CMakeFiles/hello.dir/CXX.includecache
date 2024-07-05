@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/functions.h
+
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/main.cpp
+iostream
+-
+functions.h
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/functions.h
+
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/src/factorial.cpp
+functions.h
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/src/functions.h
+
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/src/printhello.cpp
+iostream
+-
+functions.h
+/home/water/桌面/c++_yushiqi/CPP/week05/examples/lab/src/functions.h
+

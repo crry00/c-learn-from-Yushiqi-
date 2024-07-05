@@ -10,7 +10,8 @@ typedef struct Matrix_{ //use typedef to simplify type name
 } Matrix;
 
 Matrix * createMat(size_t rows, size_t cols);
-bool releaseMat(Matrix * p);
+bool releaseMat(Matrix * p);//使用bool来判断是否操作成功
 bool add(const Matrix * input1, const Matrix * input2, Matrix *output);
 
 #endif
+//头文件内写定义，cPP内写实现

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-
+//空间换时间，通过内联直接把函数嵌套进代码，如果是不内联，则调用时程序要压栈出栈，调用需要开销
+//！！inline是对编译器的建议，不是强制！！
 inline float max_function(float a, float b)
 {
     if (a > b)

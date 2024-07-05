@@ -6,12 +6,14 @@ struct Student
 {
     char name[4];
     int born;
-    bool male; 
+    bool male; //连续内存
 };
 
 int main()
 {
-    Student stu = {"Yu", 2000, true};
+    Student stu = {"Yu", 2000, true};//聚合初始化，要求所有的成员变量都是公开的
+    //Student stu("Yu", 2000, true);//构造初始化，拷贝构造
+
     Student * pStu = &stu;
 
     cout << stu.name << " was born in " << stu.born 

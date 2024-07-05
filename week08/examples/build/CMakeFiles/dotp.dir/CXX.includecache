@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/main.cpp
+iostream
+-
+cstdlib
+-
+chrono
+-
+matoperation.hpp
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/matoperation.hpp
+
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/matoperation.hpp
+

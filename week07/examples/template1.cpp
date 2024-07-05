@@ -9,12 +9,14 @@ T sum(T x, T y)
     return x +
      y;
 }
-// Explicitly instantiate
-template double sum<double>(double, double);
+// Explicitly instantiate,all is
+template double sum<double>(double,double);
+template int sum(int,int);
+// template char sum<>(char,char);
 
 int main()
-{
-    auto val = sum(4.1, 5.2);
-    cout << val << endl;
+{   
+    auto val = sum(4.1f, 5.2f);
+    cout << val << typeid(int).name()<<endl;
     return 0;
 }

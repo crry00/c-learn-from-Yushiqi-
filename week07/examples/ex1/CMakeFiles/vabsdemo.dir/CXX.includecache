@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/main.cpp
+vabs.hpp
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/vabs.hpp
+iostream
+-
+
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/vabs.hpp
+

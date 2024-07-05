@@ -27,7 +27,7 @@ int main()
 
     cout << "typeid.name of s           is " << typeid(s).name() << endl;
     cout << "typeid.name of std::string is " << typeid(std::string).name() << endl;
-    cout << "typeid.name of Student     is " << typeid(Student).name() << endl;
+    cout << "typeid.name of Student     is " << typeid(Student).name() << endl;//自定义类型的输出会根据编译器等环境不同而改变
 
     if(typeid(std::string) == typeid(s))
         cout << "s is a std::string object." << endl;

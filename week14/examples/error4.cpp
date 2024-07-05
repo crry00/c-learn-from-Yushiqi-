@@ -28,12 +28,12 @@ int main()
             z = ratio(x,y);
             std::cout << "ratio(" << x << ", " << y<< ") = " << z << std::endl;
         }
-        catch(const char * msg)
+        catch(const char * msg)//负责接 throw string
         {
             std::cerr << "Call ratio() failed: " << msg << std::endl;
             std::cerr << "I give you another chance." << std::endl;
         }
-        catch(int eid)
+        catch(int eid)//负责接 throw int
         {
             if (eid == 1)
                 std::cerr << "Call ratio() failed: the 1st argument should be positive." << std::endl;

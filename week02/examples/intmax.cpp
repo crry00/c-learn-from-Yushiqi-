@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdint>
+#include <stdint.h>
 using namespace std;
 int main()
 {

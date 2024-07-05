@@ -31,18 +31,18 @@ class Derived: public Base
 {
   public:
     int c;
-    Derived(int c): Base(c - 2, c - 1), c(c)
+    Derived(int c): Base(c - 2, c - 1), c(c)//构造函数先调用父类，再调用子类
     {
         this->a += 3; //it can be changed after initialization
         cout << "Constructor Derived::Derived(" << c << ")" << endl;
     }
-    ~Derived()
+    ~Derived()//xigou
     {
         cout << "Destructor Derived::~Derived()" << endl;
     }
     int product()
     {
-        return Base::product() * c;
+        return Base::product() * c;//调用base下的product
     }
     friend std::ostream & operator<<(std::ostream & os, const Derived & obj)
     {

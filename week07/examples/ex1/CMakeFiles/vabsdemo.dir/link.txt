@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/vabsdemo.dir/main.cpp.o  -o vabsdemo  -Wl,-rpath,/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1 libvabs.so 

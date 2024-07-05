@@ -32,7 +32,7 @@ class MyTime
     }
     std::string getTime() const
     {
-        return std::to_string(this->hours) + " hours and " 
+        return std::to_string(this->hours) + " hours and " //to_string转换成字符串
                 + std::to_string(this->minutes) + " minutes.";
     }
 };

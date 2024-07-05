@@ -55,7 +55,8 @@ class Student
         else
             std::cerr << "The input b is " << b << ", and should be in [1990, 2020]." << std::endl;
     }
-    static size_t getTotal() {return student_total;}
+    static size_t getTotal();
+    //static size_t getTotal() {return student_total;}
     // the declarations, the definitions are out of the class
     void setGender(bool isMale);
     void printInfo();
@@ -72,6 +73,10 @@ void Student::printInfo()
     std::cout << "Gender: " << (male ? "Male" : "Female") << std::endl;
 }
 
+size_t Student::getTotal()//static 声明在类内
+{
+    return student_total;
+}
 size_t Student::student_total = 0; // definition it here
 
 int main()

@@ -8,9 +8,9 @@ int main()
     int len = 0;
     while ( len < 10 )
     {
-        int num_array2[len]; //variable-length array
+        int num_array2[len]={1}; //variable-length array理论上不可以初始化，先进编译器可以
         cout << "len = " << len;
-        cout << ", sizeof(num_array2)) = " << sizeof(num_array2) << endl;
+        cout << ", sizeof(num_array2)) = " << sizeof(num_array2) <<"  "<<num_array2[1]<< endl;
         len ++;
     }
 }

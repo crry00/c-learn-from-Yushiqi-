@@ -12,10 +12,10 @@ class Student
   public:
     Student()
     {
-        name = new char[1024]{0};
+        name =  new char[1024]{0};
         born = 0;
         male = false;
-        cout << "Constructor: Person()" << endl;
+        cout << "Constructor:Person()" << endl;
     }
     Student(const char * initName, int initBorn, bool isMale)
     {
@@ -71,11 +71,11 @@ int main()
         {"Tom", 2000, true},
         {"Bob", 2001, true},
         {"Amy", 2002, false},
-    };
+    };//c++11数组的初始化
 
     class1[1].printInfo();
-    delete class1;
-    //delete []class1;
+    //delete class1;//释放但只调用第一个的细狗。。
+    delete []class1;//不仅释放内存，还调用每个元素的细狗函数
 
 
     return 0;

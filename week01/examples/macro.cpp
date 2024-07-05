@@ -1,4 +1,5 @@
 #include <iostream>
+//define just copy paste
 #define PI 2.14+1.0
 
 using namespace std;

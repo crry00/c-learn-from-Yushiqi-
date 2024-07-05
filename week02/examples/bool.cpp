@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    //bool has 8 bit =1 byte
     bool b1 = true;
     int i = b1;
     bool b2 = -256;

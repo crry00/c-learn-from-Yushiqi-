@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/add.cpp
+add.hpp
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/add.hpp
+immintrin.h
+-
+omp.h
+-
+
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/add.hpp
+iostream
+-
+vector
+-
+
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/main.cpp
+iostream
+-
+cstdlib
+-
+chrono
+-
+add.hpp
+/home/water/桌面/c++_yushiqi/CPP/week08/examples/ex/add.hpp
+

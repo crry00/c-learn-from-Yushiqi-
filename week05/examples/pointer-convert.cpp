@@ -10,7 +10,7 @@ int main()
     cout << "pi[0] = " << pi[0] << endl;
     cout << "pi[1] = " << pi[1] << endl;
 
-    delete []pi;
+    delete pi;
     //delete []pc; 
     return 0;
 }

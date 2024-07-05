@@ -21,7 +21,7 @@ class MyTime
         std::cout << "Constructor MyTime(int,int)" << std::endl;
     }
 
-    // prefix increment
+    // prefix increment,++t
     MyTime& operator++()
     {
         this->minutes++;
@@ -30,7 +30,7 @@ class MyTime
         return *this; 
     }
  
-    // postfix increment
+    // postfix increment,t++
     MyTime operator++(int)
     {
         MyTime old = *this; // keep the old value

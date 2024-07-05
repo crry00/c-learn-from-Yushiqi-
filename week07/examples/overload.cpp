@@ -18,7 +18,7 @@ double sum(double x, double y)
     return x + y;
 }
 
-// //Is the following definition correct?
+// //Is the following definition correct? just return deferent can't overload! 
 // double sum(int x, int y)
 // {
 //     cout << "sum(int, int) is called" << endl;
@@ -33,7 +33,8 @@ int main()
     cout << "sum = " << sum(1.1, 2.2) << endl;
 
     //which function will be called?
-    cout << "sum = " << sum(1, 2.2) << endl;
+    //cout << "sum = " << sum(1, 2.2) << endl;
+    //if many overload ,it will error ,beacuse two meaning!!
 
     return 0;
 }

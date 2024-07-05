@@ -7,7 +7,7 @@ class Person
   public:
     string name;
     Person(string n): name(n){}
-    void print()
+    virtual  void print()
     {
         cout << "Name: " << name << endl;
     }
@@ -18,7 +18,7 @@ class Person2
   public:
     string name;
     Person2(string n): name(n){}
-    virtual void print() = 0; 
+    virtual void print() = 0; //pure virtual funtion,cant objector ,must be virtual derive
 };
 
 class Student: public Person
@@ -35,7 +35,7 @@ class Student: public Person
 
 void printObjectInfo(Person & p)
 {
-    p.print();
+    p.print();//will call the person funtion because no virtual
 }
 
 int main()
@@ -53,10 +53,11 @@ int main()
 
     { //if you want to call a function in the base class
         Student stu("li", "2021");
-        stu.Person::print();
+        stu.Person::print();//by this way can call base's print()
 
         Person * p = new Student("xue", "2020");
-        p->Person::print(); 
+        p->Person::print(); //by this way can call base's print
+        p->print();
         delete p; 
     }
 

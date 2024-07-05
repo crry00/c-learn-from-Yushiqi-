@@ -17,7 +17,7 @@ class Derived : public Base
         n++;        //Okay
         this->n++;  //Okay
         //b.n++;      //Error. You cannot access a protected member through base
-        d.n++;      //Okay
+        d.n++;      //Okay this is the same object level
     }
 };
  
@@ -25,4 +25,5 @@ void compare(Base& b, Derived& d) // a non-member non-friend function
 {
     // b.n++; // Error
     // d.n++; // Error
+    // because they neither in base or derived
 }

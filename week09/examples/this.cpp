@@ -17,12 +17,12 @@ class Student
         male = false;
         cout << "Constructor: Person()" << endl;
     }
-    Student(const char * initName, int initBorn, bool isMale)
+    Student(const char *name, int born, bool male)
     {
-        name =  new char[1024];
-        setName(initName);
-        born = initBorn;
-        male = isMale;
+        this->name =  new char[1024];
+        this->setName(name);
+        this->born = born;
+        this->male = male;
         cout << "Constructor: Person(const char, int , bool)" << endl;
         cout << "this = " << static_cast<void *>(this) << endl;        
     }
@@ -69,6 +69,6 @@ void Student::printInfo()
 int main()
 {
     Student * s = new Student("Tom", 2000, true);
-    cout << "s = " << static_cast<void *>(s) << endl;
+    cout << "s = " << static_cast<void *>(s) << endl;//this 等价于指向该数据的指针
     return 0;
 }

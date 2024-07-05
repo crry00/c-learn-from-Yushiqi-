@@ -3,16 +3,34 @@ using namespace std;
 
 enum color {WHITE, BLACK, RED, GREEN, BLUE, YELLOW, NUM_COLORS};
 enum datatype {TYPE_INT8=1, TYPE_INT16=2, TYPE_INT32=4, TYPE_INT64=8};
-
+enum family{FATHER,MOTHER,BROTHER,SISTER};
 struct Point{
-    enum datatype type;
+    enum datatype type;//单一是4 bytes，unsigned long int，但电脑是8bytes对齐！！！
     union {
         std::int8_t data8[3];
         std::int16_t data16[3];
         std::int32_t data32[3];
-        std::int64_t data64[3];
+        std::int64_t data64[3];//24bytes
+    };//take 32bytes!
+};
+
+struct test
+{
+    //take 1 bytes
+};
+
+struct test1
+{
+    //enum datatype type;
+    char c;
+    union {
+        std::int8_t data8[3];
+        std::int16_t data16[3];
+        std::int32_t data32[3];
+        std::int64_t data64[3];//24bytes
     };
 };
+
 
 size_t datawidth(struct Point pt)
 {
@@ -43,8 +61,11 @@ int64_t l1norm(struct Point pt)
 int main()
 {
     enum color pen_color = RED;
-    pen_color = color(3); //convert int to enum
+    pen_color = color(3); //convert int to enum(all 4 bytes)//注意这里只能显示调用，不能隐式调用！
     cout << "We have " << NUM_COLORS << " pens." << endl;
+
+    cout<<"sizeof(enum)"<<sizeof(enum color)<<endl;
+
     //pen_color += 1; //error!
     int color_index = pen_color;
     color_index += 1;
@@ -53,6 +74,11 @@ int main()
     //declaration and initialization
     struct Point point1 = {.type=TYPE_INT8, .data8={-2,3,4}};
     struct Point point2 = {.type=TYPE_INT32, .data32={1,-2,3}};
+    family a=FATHER;
+    cout<<(*(color*)(&a)==WHITE)<<endl;
+    
+    cout<<"sizeof(Point):  "<<sizeof(struct Point)<<endl;
+    cout<<"sizeof(test1):  "<<sizeof(struct test1)<<endl;
     
     cout << "Data width = " << datawidth(point1) << endl;
     cout << "Data width = " << datawidth(point2) << endl;

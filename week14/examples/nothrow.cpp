@@ -9,8 +9,8 @@ int main()
     
     try {
         cout << "Trying to allocate a big block of memory" << endl;
-        p = new int[length];
-        //p = new(nothrow) int[length];
+        //p = new int[length];
+        //p = new(nothrow) int[length];if use nothrow ,it will not throw 
         cout << "No exception." << endl;
     }
     catch (std::bad_alloc & ba)

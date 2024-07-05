@@ -16,7 +16,7 @@ int main()
 {
     try
     {
-        throw Derived();
+        throw Derived();//throw Derived objector as exception!!
     }
     catch (const Base& base)
     {
@@ -29,3 +29,5 @@ int main()
 
     return 0;
 }
+
+//void fun() noexcept;保证不会有异常

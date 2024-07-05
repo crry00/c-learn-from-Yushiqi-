@@ -3,7 +3,7 @@ using namespace std;
 
 //float array_sum(const float *values, size_t length)
 //float array_sum(const float values[4], size_t length)
-float array_sum(const float values[], size_t length)
+float array_sum(const float values[], size_t length) //参数中有不修改的值记得加const！！
 {
     float sum = 0.0f;
     for (int i = 0; i < length; i++)

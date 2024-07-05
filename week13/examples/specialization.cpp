@@ -48,7 +48,7 @@ template class MyVector<int>; // Explicitly instantiate template Mat<int>
 
 // class specialization
 template<>
-class MyVector<bool>
+class MyVector<bool>//special define need redefine all things
 {
     size_t length;
     unsigned char * data;
@@ -74,10 +74,10 @@ bool MyVector<bool>::getElement(size_t index)
         cerr << "getElement(): Indices are out of range" << endl;
         return 0;
     }
-    size_t byte_id = index / 8;
+    size_t byte_id = index / 8;//每个bool变量只占一个bit ，一个byte可以存8个bit
     size_t bit_id = index % 8;
     unsigned char mask = (1 << bit_id);
-    return bool(data[byte_id] & mask) ;
+    return bool(data[byte_id] & mask) ;//与操作
 }
 bool MyVector<bool>::setElement(size_t index, bool value)
 {
@@ -92,9 +92,9 @@ bool MyVector<bool>::setElement(size_t index, bool value)
     unsigned char mask = (1 << bit_id);
 
     if (value)
-        data[byte_id] |= mask; 
+        data[byte_id] |= mask; //或1必为1
     else 
-        data[byte_id] &= ~mask;
+        data[byte_id] &= ~mask;//与0必为0
 
     return true;
 }

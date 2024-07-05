@@ -10,7 +10,8 @@ public:
     Supplier(int storage = 1000): storage(storage){}
 
     // bool foo(Sniper & sniper){sniper.bullets++;}
-    bool provide(Sniper & sniper);
+    bool provide(Sniper & sniper);//由于上面的声明，这里可以调用sniper类型，但不知道sniper类内的具体操作
+    //所以函数的具体实现要放到下面，这也是成员函数类外定义的主要用途之一
 };
 
 class Sniper
@@ -20,7 +21,7 @@ private:
 public:
     Sniper(int bullets = 0): bullets(bullets){}
     // friend class Supplier;
-    friend bool Supplier::provide(Sniper & sniper);
+    friend bool Supplier::provide(Sniper & sniper);//友元声明，使得provide函数可以调用sniper内私有变量
 };
 
     bool Supplier::provide(Sniper & sniper)

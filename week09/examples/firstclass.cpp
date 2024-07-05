@@ -1,6 +1,8 @@
 #include <iostream>
-#include <cstring>
+#include <cstring>//strncpy等c语言字符串操作
 
+
+//类比struct更安全
 class Student
 {
   public:
@@ -14,7 +16,7 @@ class Student
             std::cerr << "The input is NULL." << std::endl;
             return;
         }
-        size_t len = sizeof(name) - 1;
+        size_t len = sizeof(name) - 1;//只有3个字符留给name，有一个\0
         strncpy(name, s, len);
         name[len] = '\0';
     }
@@ -43,7 +45,7 @@ int main()
     yu.setName("Yu");
     yu.setBorn(2000);
     yu.setGender(true);
-    yu.born = 2001; // it can also be manipulated directly
+    yu.born = 2001; // it can also be manipulated directly,because not set private 
     yu.printInfo();
     std::cout << "It's name is " << yu.name << std::endl; 
     return 0;

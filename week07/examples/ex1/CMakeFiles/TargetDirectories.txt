@@ -1,0 +1,4 @@
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/CMakeFiles/rebuild_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/CMakeFiles/edit_cache.dir
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/CMakeFiles/vabsdemo.dir
+/home/water/桌面/c++_yushiqi/CPP/week07/examples/ex1/CMakeFiles/vabs.dir

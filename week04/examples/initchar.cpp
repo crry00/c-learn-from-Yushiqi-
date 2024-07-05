@@ -14,6 +14,7 @@ int main()
 
     cout << "Rabbit is (" << rabbit << ")" << endl;
     cout << "Pig's bad name is (" << bad_pig << ")" << endl; 
+    cout<<strlen(bad_pig)<<endl;
     cout << "Pig's good name is (" << good_pig << ")" << endl; 
 
     char name[10] = {'Y', 'u', '\0', 'S', '.', '0'};
